@@ -7,7 +7,9 @@ const subscriptionRoutes = require('./routes/subscriptionRoutes');
 require('dotenv').config(); 
 const app = express(); 
 connectDB(); 
-app.use(cors()); 
+app.use(cors({
+	origin:'https://cubaonline3788.github.io/TIENDA---DJC/'
+}); 
 app.use(bodyParser.json()); 
 app.use('/api/products', productRoutes); 
 app.use('/api/subscriptions', subscriptionRoutes); 
